@@ -17,3 +17,13 @@ RUN \
    source /opt/conda/etc/profile.d/conda.sh && \
    conda activate rapids && \
    conda install -y pyspark
+
+#
+# install notebook extenstions
+#
+
+RUN \
+   source /opt/conda/etc/profile.d/conda.sh && \
+   conda activate rapids && \
+   conda install -y jupyterlab-git && \
+   jupyter lab build
